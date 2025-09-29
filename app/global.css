@@ -878,29 +878,24 @@ html.dark {
 
 /* Inset text shadow effect for emoji-keyboard placeholder */
 .emoji-keyboard-input::placeholder {
-  color: transparent;
-  background:#E9E9E9;
+  color: #E9E9E9 !important;
+  background: transparent !important;
   font-family: 'GT Maru Mono', monospace;
   font-weight: 700;
-  -webkit-background-clip: text;
-  background-clip: text;
   text-shadow: 
-    /* rgba(255, 255, 255, 0.3) 0 0.2px 0, */
-     rgba(255, 255, 255, 0.5) 0.2px 0 0,
-     rgba(0, 0, 0, 0.4) -0.2px -0.3px 0,
-     rgba(255, 255, 255, 0.9) 0.5px -0.5px 0;
+    rgba(255, 255, 255, 0.5) 0.2px 0 0,
+    rgba(0, 0, 0, 0.4) -0.2px -0.3px 0,
+    rgba(255, 255, 255, 0.9) 0.5px -0.5px 0;
   filter: drop-shadow(0 1px 4px rgb(255, 255, 255, 0.4));
 }
 
 /* Styling for the actual input text when typing */
 .emoji-keyboard-input {
-  color: transparent !important;
-  background: #E9E9E9 !important;
+  color: #E9E9E9 !important;
+  background: transparent !important;
   font-family: 'GT Maru Mono', monospace;
   font-weight: 700;
   caret-color: #888888 !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
   text-shadow: 
     rgba(255, 255, 255, 0.5) 0.2px 0 0,
     rgba(0, 0, 0, 0.4) -0.2px -0.3px 0,
@@ -912,10 +907,8 @@ html.dark {
 .emoji-keyboard-input:focus {
   caret-color: #888888 !important;
   outline: none;
-  color: transparent !important;
-  background: #E9E9E9 !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
+  color: #E9E9E9 !important;
+  background: transparent !important;
   text-shadow: 
     rgba(255, 255, 255, 0.5) 0.2px 0 0,
     rgba(0, 0, 0, 0.4) -0.2px -0.3px 0,
