@@ -539,8 +539,30 @@ table {
     1px 1px 4px  rgba(255, 255, 255, 0.9) !important;
 }
 
+/* Manual hover state for JavaScript fallback */
+[data-slot="emoji-picker-emoji"].is-hover {
+  background: linear-gradient(to bottom, #FAFAF4 0%, #E8E8E8 100%) !important;
+  box-shadow:
+    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 
+    inset 1px 1px 2px 1px #ffffffe6,
+    inset -1px -1px 2px 2px rgba(0, 0, 0, 0.03),
+    -0.5px -0.5px 2px rgba(0, 0, 0, 0.09),
+    1px 1px 4px  rgba(255, 255, 255, 0.9) !important;
+}
+
 /* Override any dark mode styles for emoji hover */
 html.dark [data-slot="emoji-picker-emoji"]:hover {
+  background: linear-gradient(to bottom, #FAFAF4 0%, #E8E8E8 100%) !important;
+  box-shadow: 
+    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 
+    inset 1px 1px 2px 1px rgba(255, 255, 255, 0.9),
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    -0.5px -0.5px 2px rgba(0, 0, 0, 0.09),
+    1px 1px 4px rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Dark mode manual hover state for JavaScript fallback */
+html.dark [data-slot="emoji-picker-emoji"].is-hover {
   background: linear-gradient(to bottom, #FAFAF4 0%, #E8E8E8 100%) !important;
   box-shadow: 
     inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 
@@ -872,13 +894,11 @@ html.dark {
 
 /* Styling for the actual input text when typing */
 .emoji-keyboard-input {
-  color: transparent !important;
-  background: #E9E9E9 !important;
+  color: #E9E9E9 !important;
+  background: transparent !important;
   font-family: 'GT Maru Mono', monospace;
   font-weight: 700;
   caret-color: #888888 !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
   text-shadow: 
     rgba(255, 255, 255, 0.5) 0.2px 0 0,
     rgba(0, 0, 0, 0.4) -0.2px -0.3px 0,
@@ -890,10 +910,8 @@ html.dark {
 .emoji-keyboard-input:focus {
   caret-color: #888888 !important;
   outline: none;
-  color: transparent !important;
-  background: #E9E9E9 !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
+  color: #E9E9E9 !important;
+  background: transparent !important;
   text-shadow: 
     rgba(255, 255, 255, 0.5) 0.2px 0 0,
     rgba(0, 0, 0, 0.4) -0.2px -0.3px 0,

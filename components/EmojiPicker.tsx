@@ -237,21 +237,40 @@ export default function EmojiPickerComponent() {
   }, [])
 
   // Handle emoji copy to clipboard
+  // Handle emoji selection for macOS app
   const handleEmojiCopy = async (emoji: string) => {
     try {
-      await navigator.clipboard.writeText(emoji)
-      console.log('Copying emoji:', emoji) // Debug log
-      setCopiedEmoji(emoji)
-      setShowCopyBadge(true)
-      console.log('Badge should show:', true) // Debug log
+      console.log('🎯 Selected emoji:', emoji)
       
-      // Hide badge after 2 seconds
-      setTimeout(() => {
-        setShowCopyBadge(false)
-        setCopiedEmoji(null)
-      }, 2000)
+      // Send to macOS app if bridge is available
+      if (window.macOSEmojiKeyboard && window.macOSEmojiKeyboard.selectEmoji) {
+        console.log('📤 Sending emoji to macOS app:', emoji)
+        window.macOSEmojiKeyboard.selectEmoji(emoji)
+        
+        // Show success feedback
+        setCopiedEmoji(emoji)
+        setShowCopyBadge(true)
+        console.log('✅ Emoji sent to macOS app')
+        
+        // Hide badge after 2 seconds
+        setTimeout(() => {
+          setShowCopyBadge(false)
+          setCopiedEmoji(null)
+        }, 2000)
+      } else {
+        // Fallback to clipboard if macOS bridge not available
+        console.log('⚠️ macOS bridge not available, using clipboard fallback')
+        await navigator.clipboard.writeText(emoji)
+        setCopiedEmoji(emoji)
+        setShowCopyBadge(true)
+        
+        setTimeout(() => {
+          setShowCopyBadge(false)
+          setCopiedEmoji(null)
+        }, 2000)
+      }
     } catch (err) {
-      console.error('Failed to copy emoji:', err)
+      console.error('❌ Failed to handle emoji selection:', err)
     }
   }
 
