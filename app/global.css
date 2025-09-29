@@ -894,28 +894,32 @@ html.dark {
 
 /* Styling for the actual input text when typing */
 .emoji-keyboard-input {
-  color: #E9E9E9 !important;
-  background: transparent !important;
+  color: transparent !important;
+  background: #E9E9E9 !important;
   font-family: 'GT Maru Mono', monospace;
   font-weight: 700;
   caret-color: #888888 !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
   text-shadow: 
     rgba(255, 255, 255, 0.5) 0.2px 0 0,
     rgba(0, 0, 0, 0.4) -0.2px -0.3px 0,
     rgba(255, 255, 255, 0.9) 0.5px -0.5px 0;
-  filter: drop-shadow(0 1px 2px rgb(255, 255, 255, 0.9));
+  filter: drop-shadow(0 1px 4px rgb(255, 255, 255, 0.4));
 }
 
 /* Ensure cursor is visible with high contrast */
 .emoji-keyboard-input:focus {
   caret-color: #888888 !important;
   outline: none;
-  color: #E9E9E9 !important;
-  background: transparent !important;
+  color: transparent !important;
+  background: #E9E9E9 !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
   text-shadow: 
     rgba(255, 255, 255, 0.5) 0.2px 0 0,
     rgba(0, 0, 0, 0.4) -0.2px -0.3px 0,
     rgba(255, 255, 255, 0.9) 0.5px -0.5px 0;
-  filter: drop-shadow(0 1px 2px rgb(255, 255, 255, 0.9));
+  filter: drop-shadow(0 1px 4px rgb(255, 255, 255, 0.4));
 }
 
