@@ -37,7 +37,7 @@ function EmojiPickerSearch({
   return (
     <div
       className={cn("flex h-12 items-center gap-2 px-3 pb-2 pt-2", className)}
-      style={{ paddingLeft: '32px' }}
+      style={{ paddingLeft: '29px' }}
       data-slot="emoji-picker-search-wrapper"
     >
       <EmojiPickerPrimitive.Search
@@ -91,10 +91,10 @@ function EmojiPickerEmoji({
         className
       )}
       style={{ 
-        width: '45px', 
-        height: '45px', 
-        padding: '10px', 
-        fontSize: '28px'
+        width: '40px', 
+        height: '40px', 
+        padding: '9px', 
+        fontSize: '25px'
       }}
       data-slot="emoji-picker-emoji"
     >
@@ -111,10 +111,10 @@ function EmojiPickerCategoryHeader({
     <div
       {...props}
       className="px-3 pb-2 pt-3.5 text-xs leading-none sticky top-0 z-10"
-      style={{ paddingLeft: '30px' }}
+      style={{ paddingLeft: '27px' }}
       data-slot="emoji-picker-category-header"
     >
-            <span className="px-2 pb-0.5 pt-1 rounded-xl inline-block backdrop-blur-md relative" style={{ fontFamily: 'PP NeueBit, sans-serif', fontSize: '18px', textTransform: 'capitalize', backgroundColor: '#E6E6DE/80', color: '#6B6B6B' }}>
+            <span className="px-2 pb-0.5 pt-1 rounded-xl inline-block backdrop-blur-md relative" style={{ fontFamily: 'PP NeueBit, sans-serif', fontSize: '16px', textTransform: 'capitalize', backgroundColor: '#E6E6DE/80', color: '#6B6B6B' }}>
         {category.label}
       </span>
     </div>
