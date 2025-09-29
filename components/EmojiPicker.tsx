@@ -411,9 +411,7 @@ export default function EmojiPickerComponent() {
           
           {/* Scroll Category Indicator */}
           <div className="absolute -right-7 top-1/2 transform -translate-y-1/2 z-20">
-            <div className="scroll-indicator bg-white/20 rounded-full px-1 py-1.5 relative">
-              {/* Black overlay */}
-              <div className="absolute inset-0 bg-black/10 rounded-full"></div>
+            <div className="scroll-indicator bg-[#A3A3A3]/40 rounded-full px-1 py-1.5 relative">
               <div className="flex flex-col items-center gap-1 relative z-10">
                 {EMOJI_CATEGORIES.map((category, index) => {
                   const IconComponent = category.icon
@@ -423,7 +421,7 @@ export default function EmojiPickerComponent() {
                       className={`w-3 h-3 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer ${
                         index === currentCategory
                           ? 'text-white scale-100'
-                          : 'text-gray-400 hover:text-gray-500'
+                          : 'text-gray-400 hover:text-gray-300'
                       }`}
                       style={{
                         filter: index === currentCategory ? 'none' : 'color-burn'
