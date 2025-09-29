@@ -298,7 +298,7 @@ export default function EmojiPickerComponent() {
   return (
     <div className="fixed top-4 left-4 pointer-events-auto z-30">
       <div className="pointer-events-auto" style={{ position: 'relative' }}>
-         <div className="h-[252px] w-fit px-2 pt-1 border-t border-l border-r border-b border-gray-500/50" style={{ borderRadius: '43px', paddingBottom: '5px', backgroundColor: '#FAFAF4', position: 'relative' }}>
+         <div className="h-[252px] w-fit px-2 pt-1 border-t border-l border-r border-b border-gray-300/90" style={{ borderRadius: '43px', paddingBottom: '5px', backgroundColor: '#FAFAF4', position: 'relative' }}>
           {/* Copy confirmation badge */}
           {showCopyBadge && copiedEmoji && (
             <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 z-50 pointer-events-none">
