@@ -878,7 +878,7 @@ html.dark {
 
 /* Inset text shadow effect for emoji-keyboard placeholder */
 .emoji-keyboard-input::placeholder {
-  color: #E9E9E9 !important;
+  color: #DEDEDE !important;
   background: transparent !important;
   font-family: 'GT Maru Mono', monospace;
   font-weight: 700;
@@ -891,7 +891,7 @@ html.dark {
 
 /* Styling for the actual input text when typing */
 .emoji-keyboard-input {
-  color: #E9E9E9 !important;
+  color: #DEDEDE !important;
   background: transparent !important;
   font-family: 'GT Maru Mono', monospace;
   font-weight: 700;
@@ -907,7 +907,7 @@ html.dark {
 .emoji-keyboard-input:focus {
   caret-color: #888888 !important;
   outline: none;
-  color: #E9E9E9 !important;
+  color: #DEDEDE !important;
   background: transparent !important;
   text-shadow: 
     rgba(255, 255, 255, 0.5) 0.2px 0 0,
