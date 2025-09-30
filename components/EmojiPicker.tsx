@@ -298,7 +298,7 @@ export default function EmojiPickerComponent() {
   return (
     <div className="fixed top-4 left-4 pointer-events-auto z-30">
       <div className="pointer-events-auto" style={{ position: 'relative' }}>
-         <div className="h-[252px] w-fit px-2 pt-1 border-t border-l border-r border-b border-gray-300/90" style={{ borderRadius: '48px', paddingBottom: '5px', backgroundColor: '#FAFAF4', position: 'relative', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08)' }}>
+         <div className="h-[252px] w-fit px-2 pt-1 border-t border-l border-r border-b border-gray-300/90" style={{ borderRadius: '48px 48px 40px 40px', paddingBottom: '5px', backgroundColor: '#FAFAF4', position: 'relative', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08)' }}>
           {/* Copy confirmation badge */}
           {showCopyBadge && copiedEmoji && (
             <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 z-50 pointer-events-none">
@@ -313,7 +313,7 @@ export default function EmojiPickerComponent() {
           <div 
             className="absolute inset-0 pointer-events-none" 
             style={{ 
-              borderRadius: '48px',
+              borderRadius: '48px 48px 40px 40px',
               backgroundImage: 'url(/images/emoji/overlay.png)', 
               backgroundSize: 'cover', 
               backgroundPosition: 'center',
@@ -325,7 +325,7 @@ export default function EmojiPickerComponent() {
           <div 
             className="absolute inset-0 pointer-events-none" 
             style={{ 
-              borderRadius: '48px',
+              borderRadius: '48px 48px 40px 40px',
              background: 'linear-gradient(to right, rgba(250, 250, 244, 0) 0%, rgba(250, 250, 244, 1) 24%, rgba(250, 250, 244, 0.24) 62%, rgba(250, 250, 244, 1) 100%)'
             }}
           ></div>
@@ -333,7 +333,7 @@ export default function EmojiPickerComponent() {
           <div 
             className="absolute inset-0 pointer-events-none" 
             style={{ 
-              borderRadius: '48px',
+              borderRadius: '48px 48px 40px 40px',
               boxShadow: 'inset 7px -2px 38px 0px rgba(0, 0, 0, 0.1)'
             }}
           ></div>
@@ -341,7 +341,7 @@ export default function EmojiPickerComponent() {
           <div 
             className="absolute inset-0 pointer-events-none" 
             style={{ 
-              borderRadius: '48px',
+              borderRadius: '48px 48px 40px 40px',
               boxShadow: 'inset -4px -2px 10px 0px rgba(0, 0, 0, 0.2)'
             }}
           ></div>
@@ -349,15 +349,23 @@ export default function EmojiPickerComponent() {
           <div 
             className="absolute inset-0 pointer-events-none" 
             style={{ 
-              borderRadius: '48px',
-              boxShadow: 'inset -2px 2px 2px 1px rgba(255, 255, 255, 0.7)'
+              borderRadius: '48px 48px 40px 40px',
+              boxShadow: 'inset -2px 2px 2px 1px rgba(255, 255, 255, 0.5)'
+            }}
+          ></div>
+          {/* White inner shadow */}
+          <div 
+            className="absolute inset-0 pointer-events-none" 
+            style={{ 
+              borderRadius: '48px 48px 40px 40px',
+              boxShadow: 'inset 2px -1px 8px 0px rgba(255, 255, 255, 0.4)'
             }}
           ></div>
           {/* White inner shadow at bottom */}
           <div 
             className="absolute inset-0 pointer-events-none" 
             style={{ 
-              borderRadius: '48px',
+              borderRadius: '48px 48px 40px 40px',
               boxShadow: 'inset 0px -1px 4px 1px rgba(255, 255, 255, 0.7)'
             }}
           ></div>
