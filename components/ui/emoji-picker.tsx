@@ -114,7 +114,7 @@ function EmojiPickerCategoryHeader({
       style={{ paddingLeft: '27px' }}
       data-slot="emoji-picker-category-header"
     >
-            <span className="px-2 pb-0.5 pt-1 rounded-xl inline-block backdrop-blur-md relative" style={{ fontFamily: 'PP NeueBit, sans-serif', fontSize: '16px', textTransform: 'capitalize', backgroundColor: '#E6E6DE/80', color: '#6B6B6B' }}>
+            <span className="px-2 pb-0.5 pt-1 rounded-xl inline-block backdrop-blur-md relative" style={{ fontFamily: 'PP NeueBit, sans-serif', fontSize: '16px', textTransform: 'capitalize', backgroundColor: 'rgba(230, 230, 222, 0.5)', color: '#6B6B6B' }}>
         {category.label}
       </span>
     </div>
