@@ -36,12 +36,12 @@ function EmojiPickerSearch({
 }: EmojiPickerSearchProps) {
   return (
     <div
-      className={cn("flex h-12 items-center gap-2 px-3 pb-2 pt-2", className)}
+      className={cn("flex h-10 items-center gap-2 px-3 pb-1 pt-1", className)}
       style={{ paddingLeft: '29px' }}
       data-slot="emoji-picker-search-wrapper"
     >
       <EmojiPickerPrimitive.Search
-        className="outline-hidden flex h-10 w-full rounded-md bg-transparent py-3 text-md disabled:cursor-not-allowed disabled:opacity-50 emoji-keyboard-input"
+        className="outline-hidden flex h-8 w-full rounded-md bg-transparent py-1 text-md disabled:cursor-not-allowed disabled:opacity-50 emoji-keyboard-input"
         style={{ 
           fontFamily: 'Maru Mono, monospace', 
           color: '#E9E9E9'
