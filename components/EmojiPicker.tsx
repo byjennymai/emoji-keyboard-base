@@ -35,8 +35,6 @@ export default function EmojiPickerComponent() {
   const [currentCategory, setCurrentCategory] = useState(0)
   
   // Copy functionality state
-  const [copiedEmoji, setCopiedEmoji] = useState<string | null>(null)
-  const [showCopyBadge, setShowCopyBadge] = useState(false)
   
   // Handle category navigation
   const handleCategoryClick = (categoryIndex: number) => {
@@ -246,28 +244,11 @@ export default function EmojiPickerComponent() {
       if (window.macOSEmojiKeyboard && window.macOSEmojiKeyboard.selectEmoji) {
         console.log('📤 Sending emoji to macOS app:', emoji)
         window.macOSEmojiKeyboard.selectEmoji(emoji)
-        
-        // Show success feedback
-        setCopiedEmoji(emoji)
-        setShowCopyBadge(true)
         console.log('✅ Emoji sent to macOS app')
-        
-        // Hide badge after 2 seconds
-        setTimeout(() => {
-          setShowCopyBadge(false)
-          setCopiedEmoji(null)
-        }, 2000)
       } else {
         // Fallback to clipboard if macOS bridge not available
         console.log('⚠️ macOS bridge not available, using clipboard fallback')
         await navigator.clipboard.writeText(emoji)
-        setCopiedEmoji(emoji)
-        setShowCopyBadge(true)
-        
-        setTimeout(() => {
-          setShowCopyBadge(false)
-          setCopiedEmoji(null)
-        }, 2000)
       }
     } catch (err) {
       console.error('❌ Failed to handle emoji selection:', err)
@@ -299,16 +280,6 @@ export default function EmojiPickerComponent() {
     <div className="fixed top-4 left-4 pointer-events-auto z-30">
       <div className="pointer-events-auto" style={{ position: 'relative' }}>
          <div className="h-[252px] w-fit px-2 pt-1 border-t border-l border-r border-b border-gray-300/90" style={{ borderRadius: '48px 48px 40px 40px', paddingBottom: '5px', backgroundColor: '#FAFAF4', position: 'relative', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08)' }}>
-          {/* Copy confirmation badge */}
-          {showCopyBadge && copiedEmoji && (
-            <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 z-50 pointer-events-none">
-              <div className="copy-badge bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full shadow-lg flex items-center gap-2 relative" style={{ fontFamily: 'GT Maru Mono Medium, monospace' }}>
-                {/* Black overlay */}
-                <div className="absolute inset-0 bg-black/10 rounded-full"></div>
-                <span className="text-lg relative z-10">{copiedEmoji}</span>
-              </div>
-            </div>
-          )}
           {/* Overlay image with 17% opacity */}
           <div 
             className="absolute inset-0 pointer-events-none" 
